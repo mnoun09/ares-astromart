@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ckv2aah3t6j"]
+
+[ext_resource type="Texture2D" uid="uid://6y1vtblcy8my" path="res://assets/bg.png" id="1_vau1m"]
+[ext_resource type="PackedScene" uid="uid://pfbn85gfed77" path="res://menu.tscn" id="2_col36"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(696, 448)
+texture = ExtResource("1_vau1m")
+
+[node name="menu" parent="." instance=ExtResource("2_col36")]
+position = Vector2(-8, 0)

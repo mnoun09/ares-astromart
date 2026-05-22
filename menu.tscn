@@ -1,0 +1,426 @@
+[gd_scene load_steps=41 format=3 uid="uid://pfbn85gfed77"]
+
+[ext_resource type="Script" uid="uid://cpupc6thh6lka" path="res://menu.gd" id="1_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://brobdnuxgnnu" path="res://assets/menuBox.png" id="1_l48gv"]
+[ext_resource type="Texture2D" uid="uid://nylyu444b3gt" path="res://assets/heading.png" id="4_nrnbx"]
+[ext_resource type="FontFile" uid="uid://b2n4a4wred3nw" path="res://fonts/Chango/Chango-Regular.ttf" id="5_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://i80ul26enqal" path="res://assets/shopBody.png" id="5_iqepy"]
+[ext_resource type="Texture2D" uid="uid://2fn5alvnkwn1" path="res://assets/box.png" id="6_h1wq0"]
+[ext_resource type="Texture2D" uid="uid://b4kxwi72n01r8" path="res://assets/suits/polySuit.png" id="8_h1wq0"]
+[ext_resource type="Texture2D" uid="uid://cwcuh3cdnk7x5" path="res://icon.svg" id="8_kk3ma"]
+[ext_resource type="PackedScene" uid="uid://d24wyugjmy75b" path="res://stats.tscn" id="8_nrnbx"]
+[ext_resource type="Texture2D" uid="uid://cxu3mivdei3sq" path="res://assets/shopButtonHov.png" id="8_td6mg"]
+[ext_resource type="Texture2D" uid="uid://br10ppjjprhxj" path="res://assets/suits/orangeSuit.png" id="9_dwrpx"]
+[ext_resource type="PackedScene" uid="uid://dq8t8ud0gka0d" path="res://description_pop_up.tscn" id="9_iqepy"]
+[ext_resource type="Texture2D" uid="uid://c3mbvhglhgfjs" path="res://assets/suits/spaceXSuit.png" id="10_g7jxm"]
+[ext_resource type="Texture2D" uid="uid://cp3x7n68c15vm" path="res://assets/suits/axiomSuit.png" id="11_jspdm"]
+[ext_resource type="Texture2D" uid="uid://b6w7fx3enr6d8" path="res://assets/statsBar2.png" id="14_jspdm"]
+[ext_resource type="Texture2D" uid="uid://bbm7j6yphjs0g" path="res://assets/mobile.png" id="15_3ls4m"]
+[ext_resource type="Texture2D" uid="uid://be121b7hght23" path="res://assets/buttons/questionButton.png" id="15_gd0jp"]
+[ext_resource type="Texture2D" uid="uid://cbn5o1nxgbt5" path="res://assets/buttons/questionButtonHover.png" id="16_4ndjb"]
+[ext_resource type="PackedScene" uid="uid://3jh3pbnv1s30" path="res://q&a.tscn" id="17_4ndjb"]
+[ext_resource type="Texture2D" uid="uid://3amby0v31gev" path="res://assets/durability.png" id="19_5h80m"]
+[ext_resource type="Texture2D" uid="uid://b6t00dbkkvaxb" path="res://assets/thermal.png" id="20_w25hu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_td6mg"]
+texture = ExtResource("4_nrnbx")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_td6mg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_guify"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecwwl"]
+atlas = ExtResource("6_h1wq0")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ecwwl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kk3ma"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nrnbx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guify"]
+texture = ExtResource("8_td6mg")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guify"]
+atlas = ExtResource("8_td6mg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oil5j"]
+texture = SubResource("AtlasTexture_guify")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1wq0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqepy"]
+atlas = ExtResource("6_h1wq0")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqepy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w25hu"]
+atlas = ExtResource("19_5h80m")
+region = Rect2(819, 218, 37, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h80m"]
+atlas = ExtResource("15_3ls4m")
+region = Rect2(659, 189, 95, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_td6mg"]
+atlas = ExtResource("20_w25hu")
+region = Rect2(884, 207, 45, 61)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ls4m"]
+texture = ExtResource("15_gd0jp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5h80m"]
+texture = ExtResource("16_4ndjb")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gd0jp"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_ecwwl")
+
+[node name="MenuBox" type="Sprite2D" parent="."]
+position = Vector2(700, 450)
+texture = ExtResource("1_l48gv")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 608.0
+offset_top = 80.0
+offset_right = 802.0
+offset_bottom = 142.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_td6mg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_td6mg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_guify")
+icon = ExtResource("4_nrnbx")
+
+[node name="ShopLabel" type="Sprite2D" parent="Button"]
+position = Vector2(96, 32)
+texture = ExtResource("4_nrnbx")
+
+[node name="Label" type="Label" parent="Button/ShopLabel"]
+offset_left = -88.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.8627451, 0.47843137, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+theme_override_font_sizes/font_size = 35
+text = "SHOP"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="CustomizeBox" type="Sprite2D" parent="."]
+position = Vector2(961.5, 117.5)
+scale = Vector2(1.6182796, 0.7962963)
+texture = ExtResource("4_nrnbx")
+
+[node name="CustomizeText" type="Label" parent="."]
+offset_left = 816.0
+offset_top = 96.0
+offset_right = 1104.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(0.8627451, 0.47843137, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+theme_override_font_sizes/font_size = 28
+text = "customize"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ShopBody" type="Sprite2D" parent="."]
+position = Vector2(960, 488)
+texture = ExtResource("5_iqepy")
+
+[node name="AxiomBox" type="TextureButton" parent="."]
+offset_left = 640.0
+offset_top = 200.0
+offset_right = 840.0
+offset_bottom = 400.0
+texture_normal = SubResource("AtlasTexture_ecwwl")
+
+[node name="Icon" type="Sprite2D" parent="AxiomBox"]
+position = Vector2(100, 99)
+texture = ExtResource("8_kk3ma")
+
+[node name="AxiomButton" type="Button" parent="AxiomBox/Icon"]
+offset_left = -99.0
+offset_top = 105.0
+offset_right = 101.0
+offset_bottom = 150.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ecwwl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kk3ma")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrnbx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_guify")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_oil5j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1wq0")
+icon = SubResource("AtlasTexture_iqepy")
+
+[node name="Label" type="Label" parent="AxiomBox/Icon/AxiomButton"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 197.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.8627451, 0.47843137, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+text = "$00.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PolyBox" type="TextureButton" parent="."]
+offset_left = 1080.0
+offset_top = 200.0
+offset_right = 1280.0
+offset_bottom = 400.0
+texture_normal = SubResource("AtlasTexture_ecwwl")
+
+[node name="Icon" type="Sprite2D" parent="PolyBox"]
+position = Vector2(100, 99)
+texture = ExtResource("8_kk3ma")
+
+[node name="PolyButton" type="Button" parent="PolyBox/Icon"]
+offset_left = -99.0
+offset_top = 105.0
+offset_right = 101.0
+offset_bottom = 150.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ecwwl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kk3ma")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrnbx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iqepy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1wq0")
+icon = SubResource("AtlasTexture_iqepy")
+
+[node name="Label" type="Label" parent="PolyBox/Icon/PolyButton"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 197.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.8627451, 0.47843137, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+text = "$00.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OrangeBox" type="TextureButton" parent="."]
+offset_left = 861.0
+offset_top = 200.0
+offset_right = 1061.0
+offset_bottom = 400.0
+texture_normal = SubResource("AtlasTexture_ecwwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="OrangeBox"]
+position = Vector2(100, 99)
+texture = ExtResource("8_kk3ma")
+
+[node name="OrangeButton" type="Button" parent="OrangeBox/Sprite2D"]
+offset_left = -99.0
+offset_top = 105.0
+offset_right = 101.0
+offset_bottom = 150.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ecwwl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kk3ma")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrnbx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iqepy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1wq0")
+icon = SubResource("AtlasTexture_iqepy")
+
+[node name="Label" type="Label" parent="OrangeBox/Sprite2D/OrangeButton"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 197.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.8627451, 0.47843137, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+text = "$00.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceXBox" type="TextureButton" parent="."]
+offset_left = 640.0
+offset_top = 520.0
+offset_right = 840.0
+offset_bottom = 720.0
+texture_normal = SubResource("AtlasTexture_ecwwl")
+
+[node name="Icon" type="Sprite2D" parent="SpaceXBox"]
+position = Vector2(100, 99)
+texture = ExtResource("8_kk3ma")
+
+[node name="SpaceXButton" type="Button" parent="SpaceXBox/Icon"]
+offset_left = -99.0
+offset_top = 105.0
+offset_right = 101.0
+offset_bottom = 150.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ecwwl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kk3ma")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrnbx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iqepy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h1wq0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1wq0")
+icon = SubResource("AtlasTexture_iqepy")
+
+[node name="Label" type="Label" parent="SpaceXBox/Icon/SpaceXButton"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 197.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.8627451, 0.47843137, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+text = "$00.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Axiom" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(676, 598)
+texture = ExtResource("11_jspdm")
+
+[node name="m" type="Sprite2D" parent="Axiom"]
+position = Vector2(-337.00003, -490.00003)
+scale = Vector2(0.92211056, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="d" type="Sprite2D" parent="Axiom"]
+position = Vector2(-354.5, -441)
+scale = Vector2(0.8366834, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="t" type="Sprite2D" parent="Axiom"]
+position = Vector2(-338.5, -393)
+scale = Vector2(0.9170854, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="Poly" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(676, 598)
+texture = ExtResource("8_h1wq0")
+
+[node name="m" type="Sprite2D" parent="Poly"]
+position = Vector2(-378.25, -490.00003)
+scale = Vector2(0.71482426, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="d" type="Sprite2D" parent="Poly"]
+position = Vector2(-362.5, -441)
+scale = Vector2(0.7964824, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="t" type="Sprite2D" parent="Poly"]
+position = Vector2(-362.5, -393)
+scale = Vector2(0.7964823, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="Orange" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(676, 598)
+texture = ExtResource("9_dwrpx")
+
+[node name="m" type="Sprite2D" parent="Orange"]
+position = Vector2(-434.25, -490.00003)
+scale = Vector2(0.43341714, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="d" type="Sprite2D" parent="Orange"]
+position = Vector2(-354.5, -441)
+scale = Vector2(0.8366834, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="t" type="Sprite2D" parent="Orange"]
+position = Vector2(-410.5, -393)
+scale = Vector2(0.55527633, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="SpaceX" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(676, 598)
+texture = ExtResource("10_g7jxm")
+
+[node name="m" type="Sprite2D" parent="SpaceX"]
+position = Vector2(-338.25003, -490.00003)
+scale = Vector2(0.9158291, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="d" type="Sprite2D" parent="SpaceX"]
+position = Vector2(-382.5, -441)
+scale = Vector2(0.6959799, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="t" type="Sprite2D" parent="SpaceX"]
+position = Vector2(-406.5, -393)
+scale = Vector2(0.57537687, 1)
+texture = ExtResource("14_jspdm")
+
+[node name="descriptionPopUp" parent="." instance=ExtResource("9_iqepy")]
+visible = false
+position = Vector2(632, 144)
+
+[node name="stats" parent="." instance=ExtResource("8_nrnbx")]
+position = Vector2(32, 56)
+
+[node name="StatsBar" parent="stats" index="0"]
+position = Vector2(322, 52)
+
+[node name="StatsBar2" parent="stats" index="1"]
+position = Vector2(322, 100)
+
+[node name="StatsBar3" parent="stats" index="2"]
+position = Vector2(322, 148)
+
+[node name="Durability" type="Sprite2D" parent="stats"]
+position = Vector2(88, 101)
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_w25hu")
+
+[node name="Mobile" type="Sprite2D" parent="stats"]
+position = Vector2(90, 52.000008)
+scale = Vector2(0.35, 0.35)
+texture = SubResource("AtlasTexture_5h80m")
+
+[node name="Thermal" type="Sprite2D" parent="stats"]
+position = Vector2(92, 151)
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_td6mg")
+
+[node name="QBut" type="Button" parent="."]
+custom_minimum_size = Vector2(55, 55)
+offset_left = 64.0
+offset_top = 784.0
+offset_right = 119.0
+offset_bottom = 839.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ls4m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5h80m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gd0jp")
+
+[node name="q&a" parent="." instance=ExtResource("17_4ndjb")]
+visible = false
+position = Vector2(112, 96)
+
+[connection signal="pressed" from="AxiomBox/Icon/AxiomButton" to="." method="_on_axiom_button_pressed"]
+[connection signal="pressed" from="PolyBox/Icon/PolyButton" to="." method="_on_poly_button_pressed"]
+[connection signal="pressed" from="OrangeBox/Sprite2D/OrangeButton" to="." method="_on_orange_button_pressed"]
+[connection signal="pressed" from="SpaceXBox/Icon/SpaceXButton" to="." method="_on_space_x_button_pressed"]
+[connection signal="pressed" from="descriptionPopUp/Description/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="QBut" to="." method="_on_q_but_pressed"]
+[connection signal="pressed" from="q&a/Button2" to="." method="_on_button_2_pressed"]
+
+[editable path="descriptionPopUp"]
+[editable path="stats"]
+[editable path="q&a"]

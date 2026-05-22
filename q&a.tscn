@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://3jh3pbnv1s30"]
+
+[ext_resource type="Texture2D" uid="uid://dewibyhjcqfcd" path="res://assets/q&a.png" id="1_8foyi"]
+[ext_resource type="Texture2D" uid="uid://ckvjbb5t11g0f" path="res://assets/buttons/XButton.png" id="2_a0xf0"]
+[ext_resource type="Texture2D" uid="uid://bpss2f7efh4ug" path="res://assets/buttons/hoverXButton.png" id="3_qttx6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7v2ll"]
+texture = ExtResource("2_a0xf0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2dppl"]
+texture = ExtResource("3_qttx6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjtfi"]
+
+[node name="q&a" type="Node2D"]
+
+[node name="Q&a" type="Sprite2D" parent="."]
+position = Vector2(576, 344)
+texture = ExtResource("1_8foyi")
+
+[node name="Button2" type="Button" parent="."]
+custom_minimum_size = Vector2(65, 65)
+offset_left = 4.0
+offset_top = -1.0
+offset_right = 69.0
+offset_bottom = 64.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_7v2ll")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2dppl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sjtfi")

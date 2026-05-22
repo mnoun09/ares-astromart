@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://d24wyugjmy75b"]
+
+[ext_resource type="Texture2D" uid="uid://c5kpmc71g81b8" path="res://assets/statsBar.png" id="2_adv4l"]
+
+[node name="stats" type="Node2D"]
+
+[node name="StatsBar" type="Sprite2D" parent="."]
+position = Vector2(208, 72)
+texture = ExtResource("2_adv4l")
+
+[node name="StatsBar2" type="Sprite2D" parent="."]
+position = Vector2(208, 128)
+texture = ExtResource("2_adv4l")
+
+[node name="StatsBar3" type="Sprite2D" parent="."]
+position = Vector2(280, 576)
+texture = ExtResource("2_adv4l")

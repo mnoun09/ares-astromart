@@ -1,0 +1,200 @@
+[gd_scene load_steps=15 format=3 uid="uid://dq8t8ud0gka0d"]
+
+[ext_resource type="Texture2D" uid="uid://c883yjgk36cc0" path="res://assets/description.png" id="1_5rfnw"]
+[ext_resource type="Script" uid="uid://ig0v2c7c70gu" path="res://description_pop_up.gd" id="1_n6xre"]
+[ext_resource type="Texture2D" uid="uid://ckvjbb5t11g0f" path="res://assets/buttons/XButton.png" id="2_n6xre"]
+[ext_resource type="Texture2D" uid="uid://bpss2f7efh4ug" path="res://assets/buttons/hoverXButton.png" id="3_v6r64"]
+[ext_resource type="Texture2D" uid="uid://chse8eyccwqn8" path="res://assets/axiomSuitR.png" id="5_l1nht"]
+[ext_resource type="FontFile" uid="uid://b2n4a4wred3nw" path="res://fonts/Chango/Chango-Regular.ttf" id="6_l1nht"]
+[ext_resource type="FontFile" uid="uid://ci4soy0dujcwy" path="res://fonts/Chango,Merriweather/Merriweather/static/Merriweather_120pt-Bold.ttf" id="7_7mifk"]
+[ext_resource type="Texture2D" uid="uid://djx6bwxe3neb8" path="res://assets/spaceXSuit.png" id="8_38byc"]
+
+[sub_resource type="Animation" id="Animation_v6r64"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Description:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_n6xre"]
+resource_name = "entering"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Description:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1nht"]
+_data = {
+&"RESET": SubResource("Animation_v6r64"),
+&"entering": SubResource("Animation_n6xre")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l1nht"]
+texture = ExtResource("2_n6xre")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7mifk"]
+texture = ExtResource("3_v6r64")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1nht"]
+
+[node name="descriptionPopUp" type="Node2D"]
+script = ExtResource("1_n6xre")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_l1nht")
+}
+
+[node name="Description" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(323, 311)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_5rfnw")
+
+[node name="Button" type="Button" parent="Description"]
+custom_minimum_size = Vector2(55, 55)
+offset_left = -324.0
+offset_top = -314.0
+offset_right = -269.0
+offset_bottom = -259.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_l1nht")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7mifk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l1nht")
+
+[node name="Axiom" type="Label" parent="Description/Button"]
+visible = false
+layout_mode = 0
+offset_left = 14.833349
+offset_top = 54.833347
+offset_right = 622.8334
+offset_bottom = 155.83334
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("6_l1nht")
+theme_override_font_sizes/font_size = 40
+text = "Axiom Spaxe AxEMU SpaceSuit"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Desc" type="Label" parent="Description/Button/Axiom"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 106.666664
+offset_right = 604.0
+offset_bottom = 559.6666
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 27
+text = "\"A cost-effective multipurpose spacesuit, the AxEMU is built for any mission, designed to be safer and more agile while meeting the rigorous requirements for each environment with minimal changes.\"
+"
+autowrap_mode = 2
+
+[node name="Source" type="Label" parent="Description/Button/Axiom"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 526.6666
+offset_right = 408.83334
+offset_bottom = 568.83325
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 15
+text = "(Axiom Suit — Axiom Space, n.d.)"
+autowrap_mode = 2
+
+[node name="Stats" type="Label" parent="Description/Button/Axiom"]
+layout_mode = 0
+offset_left = 26.666666
+offset_top = 313.33334
+offset_right = 386.66666
+offset_bottom = 600.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 25
+text = "Mobility - 90
+
+Durability - 85
+
+Thermal - 90"
+autowrap_mode = 2
+
+[node name="Img" type="Sprite2D" parent="Description/Button/Axiom"]
+position = Vector2(499.99997, 400)
+scale = Vector2(0.05, 0.048)
+texture = ExtResource("5_l1nht")
+
+[node name="SpaceX" type="Label" parent="Description/Button"]
+visible = false
+layout_mode = 0
+offset_left = 14.833349
+offset_top = 8.166681
+offset_right = 622.8334
+offset_bottom = 109.16669
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("6_l1nht")
+theme_override_font_sizes/font_size = 40
+text = "SpaxeX SpaceSuit"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Desc" type="Label" parent="Description/Button/SpaceX"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 86.666664
+offset_right = 326.66666
+offset_bottom = 566.6667
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 27
+text = "\"Evolved from the Intravehicular Activity (IVA) suit, the EVA suit provides greater mobility, a state-of-the-art helmet heads-up display (HUD) and camera, new thermal management textiles, and materials borrowed from Falcon’s interstage and Dragon’s trunk.\""
+autowrap_mode = 2
+
+[node name="Source" type="Label" parent="Description/Button/SpaceX"]
+layout_mode = 0
+offset_left = 553.3333
+offset_top = 573.3333
+offset_right = 606.6666
+offset_bottom = 600.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 15
+text = "(Kraus)"
+autowrap_mode = 2
+
+[node name="Stats" type="Label" parent="Description/Button/SpaceX"]
+layout_mode = 0
+offset_left = 333.3333
+offset_top = 320.0
+offset_right = 599.99994
+offset_bottom = 493.33334
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 25
+text = "Mobility - 90
+
+Durability - 70
+
+Thermal - 65"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SpaceXSuit" type="Sprite2D" parent="Description/Button/SpaceX"]
+position = Vector2(466.66666, 186.66667)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("8_38byc")
