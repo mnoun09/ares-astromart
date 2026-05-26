@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dq8t8ud0gka0d"]
+[gd_scene load_steps=17 format=3 uid="uid://dq8t8ud0gka0d"]
 
 [ext_resource type="Texture2D" uid="uid://c883yjgk36cc0" path="res://assets/description.png" id="1_5rfnw"]
 [ext_resource type="Script" uid="uid://ig0v2c7c70gu" path="res://description_pop_up.gd" id="1_n6xre"]
@@ -8,6 +8,8 @@
 [ext_resource type="FontFile" uid="uid://b2n4a4wred3nw" path="res://fonts/Chango/Chango-Regular.ttf" id="6_l1nht"]
 [ext_resource type="FontFile" uid="uid://ci4soy0dujcwy" path="res://fonts/Chango,Merriweather/Merriweather/static/Merriweather_120pt-Bold.ttf" id="7_7mifk"]
 [ext_resource type="Texture2D" uid="uid://djx6bwxe3neb8" path="res://assets/spaceXSuit.png" id="8_38byc"]
+[ext_resource type="Texture2D" uid="uid://b13q1fd1bquod" path="res://sk1.jpg" id="9_y4m1o"]
+[ext_resource type="Texture2D" uid="uid://bf7krkif8ogti" path="res://poly.jpg" id="10_vmm1a"]
 
 [sub_resource type="Animation" id="Animation_v6r64"]
 length = 0.001
@@ -81,9 +83,9 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_l1nht")
 visible = false
 layout_mode = 0
 offset_left = 14.833349
-offset_top = 54.833347
+offset_top = 34.833347
 offset_right = 622.8334
-offset_bottom = 155.83334
+offset_bottom = 135.83334
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_l1nht")
 theme_override_font_sizes/font_size = 40
@@ -141,8 +143,8 @@ texture = ExtResource("5_l1nht")
 [node name="SpaceX" type="Label" parent="Description/Button"]
 visible = false
 layout_mode = 0
-offset_left = 14.833349
-offset_top = 8.166681
+offset_left = 14.833347
+offset_top = 8.166683
 offset_right = 622.8334
 offset_bottom = 109.16669
 theme_override_constants/line_spacing = 0
@@ -198,3 +200,102 @@ autowrap_mode = 2
 position = Vector2(466.66666, 186.66667)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("8_38byc")
+
+[node name="Orange" type="Label" parent="Description/Button"]
+visible = false
+layout_mode = 0
+offset_left = 14.833347
+offset_top = 8.166683
+offset_right = 622.8334
+offset_bottom = 109.16669
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("6_l1nht")
+theme_override_font_sizes/font_size = 40
+text = "Sk-1 SpaceSuit"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Desc" type="Label" parent="Description/Button/Orange"]
+layout_mode = 0
+offset_left = 26.666666
+offset_top = 106.666664
+offset_right = 386.66666
+offset_bottom = 586.6667
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 27
+text = "The first ever spacesuit to be used, developed specifically for Yuri Gagarin. It's bright orange color made it easy for recovery helicopter pilots to spot the astronaut once landed. It's equipped with an auxilary life support system and survival features. You can never go wrong with the classics!"
+autowrap_mode = 2
+
+[node name="Stats" type="Label" parent="Description/Button/Orange"]
+layout_mode = 0
+offset_left = 353.3333
+offset_top = 380.0
+offset_right = 619.99994
+offset_bottom = 553.33325
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 25
+text = "Mobility - 40
+
+Durability - 85
+
+Thermal - 60"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Sk1" type="Sprite2D" parent="Description/Button/Orange"]
+position = Vector2(499.99997, 220)
+scale = Vector2(0.41666666, 0.41666666)
+texture = ExtResource("9_y4m1o")
+
+[node name="Poly" type="Label" parent="Description/Button"]
+visible = false
+layout_mode = 0
+offset_left = 14.833347
+offset_top = 14.833351
+offset_right = 622.8334
+offset_bottom = 115.83335
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("6_l1nht")
+theme_override_font_sizes/font_size = 40
+text = "Polyethylene Suit"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Desc" type="Label" parent="Description/Button/Poly"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 79.99999
+offset_right = 593.3333
+offset_bottom = 560.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 27
+text = "A state of the art space suit made from polyethylene. This stylish suit is also highly effective at absorbing deep-space radiation, making it the #1 choice for EVA (Extravehicular Activity) suits"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Stats" type="Label" parent="Description/Button/Poly"]
+layout_mode = 0
+offset_left = 66.666664
+offset_top = 339.99997
+offset_right = 266.66666
+offset_bottom = 513.3334
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_7mifk")
+theme_override_font_sizes/font_size = 25
+text = "Mobility - 75
+
+Durability - 80
+
+Thermal - 80"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Poly2" type="Sprite2D" parent="Description/Button/Poly"]
+position = Vector2(446.66666, 420)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_vmm1a")

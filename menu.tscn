@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://pfbn85gfed77"]
+[gd_scene load_steps=84 format=3 uid="uid://pfbn85gfed77"]
 
 [ext_resource type="Script" uid="uid://cpupc6thh6lka" path="res://menu.gd" id="1_ecwwl"]
 [ext_resource type="Texture2D" uid="uid://brobdnuxgnnu" path="res://assets/menuBox.png" id="1_l48gv"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://i80ul26enqal" path="res://assets/shopBody.png" id="5_iqepy"]
 [ext_resource type="Texture2D" uid="uid://2fn5alvnkwn1" path="res://assets/box.png" id="6_h1wq0"]
 [ext_resource type="Texture2D" uid="uid://b4kxwi72n01r8" path="res://assets/suits/polySuit.png" id="8_h1wq0"]
-[ext_resource type="Texture2D" uid="uid://cwcuh3cdnk7x5" path="res://icon.svg" id="8_kk3ma"]
 [ext_resource type="PackedScene" uid="uid://d24wyugjmy75b" path="res://stats.tscn" id="8_nrnbx"]
 [ext_resource type="Texture2D" uid="uid://cxu3mivdei3sq" path="res://assets/shopButtonHov.png" id="8_td6mg"]
 [ext_resource type="Texture2D" uid="uid://br10ppjjprhxj" path="res://assets/suits/orangeSuit.png" id="9_dwrpx"]
@@ -21,11 +20,33 @@
 [ext_resource type="PackedScene" uid="uid://3jh3pbnv1s30" path="res://q&a.tscn" id="17_4ndjb"]
 [ext_resource type="Texture2D" uid="uid://3amby0v31gev" path="res://assets/durability.png" id="19_5h80m"]
 [ext_resource type="Texture2D" uid="uid://b6t00dbkkvaxb" path="res://assets/thermal.png" id="20_w25hu"]
+[ext_resource type="Texture2D" uid="uid://c8vxv06y07qyg" path="res://assets/customize/Untitled_Artwork-7 4.png" id="21_xisss"]
+[ext_resource type="Texture2D" uid="uid://davnscfveblkf" path="res://assets/customize/Untitled_Artwork-8 4.png" id="22_5e35a"]
+[ext_resource type="Texture2D" uid="uid://bygid0hsgok5i" path="res://assets/customize/Untitled_Artwork-9 2.png" id="23_snj3a"]
+[ext_resource type="Texture2D" uid="uid://b885jlyxxot8p" path="res://assets/customize/Untitled_Artwork-10 2.png" id="24_c770m"]
+[ext_resource type="Texture2D" uid="uid://d1l2wfxqlwp" path="res://assets/customize/Untitled_Artwork-11 2.png" id="25_w0s3i"]
+[ext_resource type="Texture2D" uid="uid://dwnf853nk0fs3" path="res://assets/customize/Untitled_Artwork-1 7.png" id="26_3kqnc"]
+[ext_resource type="Texture2D" uid="uid://c402828grih8l" path="res://assets/customize/Untitled_Artwork-2 6.png" id="27_lo2je"]
+[ext_resource type="Texture2D" uid="uid://b7nee8k8xkuid" path="res://assets/customize/Untitled_Artwork-3 6.png" id="28_28d1b"]
+[ext_resource type="Texture2D" uid="uid://xj8hst2axt3n" path="res://assets/customize/Untitled_Artwork-4 4.png" id="29_bhlom"]
+[ext_resource type="Texture2D" uid="uid://dcovfoepbu08v" path="res://assets/customize/Untitled_Artwork-5 4.png" id="30_x5sqb"]
+[ext_resource type="Texture2D" uid="uid://dyrw6ufj4r7qw" path="res://assets/customize/Untitled_Artwork-6 4.png" id="31_ciy7n"]
+[ext_resource type="Texture2D" uid="uid://cytvu6gc07txw" path="res://assets/customize/Untitled_Artwork-12 2.png" id="32_tnkdk"]
+[ext_resource type="Texture2D" uid="uid://ch54f6iyhqhde" path="res://assets/customize/Untitled_Artwork-13.png" id="33_8o4uf"]
+[ext_resource type="Texture2D" uid="uid://cp6612kmcw51h" path="res://assets/customize/Untitled_Artwork-14.png" id="34_j1y2i"]
+[ext_resource type="Texture2D" uid="uid://c0260wt1ykyc6" path="res://assets/customize/Untitled_Artwork-15.png" id="35_qb2su"]
+[ext_resource type="Texture2D" uid="uid://5bf2bv8jeiqw" path="res://assets/customize/Untitled_Artwork-16.png" id="36_0wi06"]
+[ext_resource type="Texture2D" uid="uid://d52e0uignfrv" path="res://assets/customize/Untitled_Artwork-17.png" id="37_3i641"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_td6mg"]
 texture = ExtResource("4_nrnbx")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_td6mg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lmdq"]
+atlas = ExtResource("8_td6mg")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2id3"]
+texture = SubResource("AtlasTexture_8lmdq")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_guify"]
 
@@ -33,14 +54,27 @@ texture = ExtResource("4_nrnbx")
 atlas = ExtResource("6_h1wq0")
 region = Rect2(0, 0, 200, 200)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ecwwl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oil5j"]
+atlas = ExtResource("11_jspdm")
+region = Rect2(208, 96, 296, 304)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhgcl"]
+atlas = ExtResource("6_h1wq0")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8tnp7"]
+texture = SubResource("AtlasTexture_xhgcl")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kk3ma"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nrnbx"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guify"]
-texture = ExtResource("8_td6mg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tnp7"]
+atlas = ExtResource("8_td6mg")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rlonj"]
+texture = SubResource("AtlasTexture_8tnp7")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_guify"]
 atlas = ExtResource("8_td6mg")
@@ -50,11 +84,65 @@ texture = SubResource("AtlasTexture_guify")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1wq0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iqepy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uog0"]
+atlas = ExtResource("8_h1wq0")
+region = Rect2(200, 136, 296, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlonj"]
 atlas = ExtResource("6_h1wq0")
 region = Rect2(0, 208, 200, 37)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqepy"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t5jqm"]
+texture = SubResource("AtlasTexture_rlonj")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5jqm"]
+atlas = ExtResource("8_td6mg")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lmdq"]
+texture = SubResource("AtlasTexture_t5jqm")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqepy"]
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5x1w"]
+atlas = ExtResource("9_dwrpx")
+region = Rect2(216, 144, 272, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkpqm"]
+atlas = SubResource("AtlasTexture_k5x1w")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2id3"]
+atlas = ExtResource("6_h1wq0")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k1fdc"]
+texture = SubResource("AtlasTexture_m2id3")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su4y3"]
+atlas = ExtResource("8_td6mg")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c8pol"]
+texture = SubResource("AtlasTexture_su4y3")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wriu"]
+atlas = ExtResource("10_g7jxm")
+region = Rect2(216, 136, 264, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xisss"]
+atlas = ExtResource("6_h1wq0")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5e35a"]
+texture = SubResource("AtlasTexture_xisss")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snj3a"]
+atlas = ExtResource("8_td6mg")
+region = Rect2(0, 208, 200, 37)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c770m"]
+texture = SubResource("AtlasTexture_snj3a")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w25hu"]
 atlas = ExtResource("19_5h80m")
@@ -76,6 +164,31 @@ texture = ExtResource("16_4ndjb")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gd0jp"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xisss"]
+bg_color = Color(1, 0.8901961, 0.7921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5e35a"]
+bg_color = Color(1, 0.81960785, 0.65882355, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snj3a"]
+bg_color = Color(1, 0.81960785, 0.65882355, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wodf"]
+atlas = ExtResource("21_xisss")
+region = Rect2(288, 216, 120, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c770m"]
+bg_color = Color(1, 0.81960785, 0.65882355, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0s3i"]
+bg_color = Color(1, 0.81960785, 0.65882355, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kqnc"]
+bg_color = Color(1, 0.81960785, 0.65882355, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lo2je"]
+bg_color = Color(1, 0.81960785, 0.65882355, 1)
+
 [node name="menu" type="Node2D"]
 script = ExtResource("1_ecwwl")
 
@@ -83,24 +196,22 @@ script = ExtResource("1_ecwwl")
 position = Vector2(700, 450)
 texture = ExtResource("1_l48gv")
 
-[node name="Button" type="Button" parent="."]
+[node name="ShopButton" type="Button" parent="."]
 offset_left = 608.0
 offset_top = 80.0
 offset_right = 802.0
 offset_bottom = 142.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_td6mg")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_td6mg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m2id3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_guify")
-icon = ExtResource("4_nrnbx")
 
-[node name="ShopLabel" type="Sprite2D" parent="Button"]
+[node name="ShopLabel" type="Sprite2D" parent="ShopButton"]
 position = Vector2(96, 32)
-texture = ExtResource("4_nrnbx")
 
-[node name="Label" type="Label" parent="Button/ShopLabel"]
-offset_left = -88.0
+[node name="Label" type="Label" parent="ShopButton/ShopLabel"]
+offset_left = -96.0
 offset_top = -24.0
-offset_right = 88.0
+offset_right = 96.0
 offset_bottom = 24.0
 theme_override_colors/font_color = Color(0.8627451, 0.47843137, 0.38431373, 1)
 theme_override_fonts/font = ExtResource("5_ecwwl")
@@ -110,12 +221,39 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Customize" type="Button" parent="."]
+offset_left = 816.0
+offset_top = 80.0
+offset_right = 1120.0
+offset_bottom = 142.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_td6mg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m2id3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_guify")
+
+[node name="ShopLabel" type="Sprite2D" parent="Customize"]
+position = Vector2(96, 32)
+
+[node name="Label" type="Label" parent="Customize/ShopLabel"]
+offset_left = -96.0
+offset_top = -24.0
+offset_right = 208.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.8627451, 0.47843137, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+theme_override_font_sizes/font_size = 35
+text = "Customize"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="CustomizeBox" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(961.5, 117.5)
 scale = Vector2(1.6182796, 0.7962963)
 texture = ExtResource("4_nrnbx")
 
 [node name="CustomizeText" type="Label" parent="."]
+visible = false
 offset_left = 816.0
 offset_top = 96.0
 offset_right = 1104.0
@@ -129,37 +267,39 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="ShopBody" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(960, 488)
 texture = ExtResource("5_iqepy")
 
-[node name="AxiomBox" type="TextureButton" parent="."]
-offset_left = 640.0
-offset_top = 200.0
-offset_right = 840.0
-offset_bottom = 400.0
+[node name="AxiomBox" type="TextureButton" parent="ShopBody"]
+offset_left = -320.0
+offset_top = -288.0
+offset_right = -120.0
+offset_bottom = -88.0
 texture_normal = SubResource("AtlasTexture_ecwwl")
 
-[node name="Icon" type="Sprite2D" parent="AxiomBox"]
+[node name="Icon" type="Sprite2D" parent="ShopBody/AxiomBox"]
 position = Vector2(100, 99)
-texture = ExtResource("8_kk3ma")
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_oil5j")
 
-[node name="AxiomButton" type="Button" parent="AxiomBox/Icon"]
-offset_left = -99.0
-offset_top = 105.0
-offset_right = 101.0
-offset_bottom = 150.0
+[node name="AxiomButton" type="Button" parent="ShopBody/AxiomBox"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 204.0
+offset_right = 201.0
+offset_bottom = 249.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ecwwl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8tnp7")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kk3ma")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrnbx")
-theme_override_styles/hover = SubResource("StyleBoxTexture_guify")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rlonj")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_oil5j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1wq0")
-icon = SubResource("AtlasTexture_iqepy")
 
-[node name="Label" type="Label" parent="AxiomBox/Icon/AxiomButton"]
+[node name="Label" type="Label" parent="ShopBody/AxiomBox/AxiomButton"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 7.0
@@ -171,34 +311,36 @@ text = "$00.00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PolyBox" type="TextureButton" parent="."]
-offset_left = 1080.0
-offset_top = 200.0
-offset_right = 1280.0
-offset_bottom = 400.0
+[node name="PolyBox" type="TextureButton" parent="ShopBody"]
+offset_left = 120.0
+offset_top = -288.0
+offset_right = 320.0
+offset_bottom = -88.0
 texture_normal = SubResource("AtlasTexture_ecwwl")
 
-[node name="Icon" type="Sprite2D" parent="PolyBox"]
+[node name="Icon" type="Sprite2D" parent="ShopBody/PolyBox"]
 position = Vector2(100, 99)
-texture = ExtResource("8_kk3ma")
+scale = Vector2(0.45, 0.45)
+texture = SubResource("AtlasTexture_8uog0")
 
-[node name="PolyButton" type="Button" parent="PolyBox/Icon"]
-offset_left = -99.0
-offset_top = 105.0
-offset_right = 101.0
-offset_bottom = 150.0
+[node name="PolyButton" type="Button" parent="ShopBody/PolyBox"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 204.0
+offset_right = 201.0
+offset_bottom = 249.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ecwwl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t5jqm")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kk3ma")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrnbx")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_iqepy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8lmdq")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1wq0")
 icon = SubResource("AtlasTexture_iqepy")
 
-[node name="Label" type="Label" parent="PolyBox/Icon/PolyButton"]
+[node name="Label" type="Label" parent="ShopBody/PolyBox/PolyButton"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 7.0
@@ -210,34 +352,36 @@ text = "$00.00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="OrangeBox" type="TextureButton" parent="."]
-offset_left = 861.0
-offset_top = 200.0
-offset_right = 1061.0
-offset_bottom = 400.0
+[node name="OrangeBox" type="TextureButton" parent="ShopBody"]
+offset_left = -99.0
+offset_top = -288.0
+offset_right = 101.0
+offset_bottom = -88.0
 texture_normal = SubResource("AtlasTexture_ecwwl")
 
-[node name="Sprite2D" type="Sprite2D" parent="OrangeBox"]
+[node name="Sprite2D" type="Sprite2D" parent="ShopBody/OrangeBox"]
 position = Vector2(100, 99)
-texture = ExtResource("8_kk3ma")
+scale = Vector2(0.45, 0.45)
+texture = SubResource("AtlasTexture_rkpqm")
 
-[node name="OrangeButton" type="Button" parent="OrangeBox/Sprite2D"]
-offset_left = -99.0
-offset_top = 105.0
-offset_right = 101.0
-offset_bottom = 150.0
+[node name="OrangeButton" type="Button" parent="ShopBody/OrangeBox"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 204.0
+offset_right = 201.0
+offset_bottom = 249.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ecwwl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_k1fdc")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kk3ma")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrnbx")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_iqepy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c8pol")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1wq0")
 icon = SubResource("AtlasTexture_iqepy")
 
-[node name="Label" type="Label" parent="OrangeBox/Sprite2D/OrangeButton"]
+[node name="Label" type="Label" parent="ShopBody/OrangeBox/OrangeButton"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 7.0
@@ -249,34 +393,36 @@ text = "$00.00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpaceXBox" type="TextureButton" parent="."]
-offset_left = 640.0
-offset_top = 520.0
-offset_right = 840.0
-offset_bottom = 720.0
+[node name="SpaceXBox" type="TextureButton" parent="ShopBody"]
+offset_left = -320.0
+offset_top = 32.0
+offset_right = -120.0
+offset_bottom = 232.0
 texture_normal = SubResource("AtlasTexture_ecwwl")
 
-[node name="Icon" type="Sprite2D" parent="SpaceXBox"]
+[node name="Icon" type="Sprite2D" parent="ShopBody/SpaceXBox"]
 position = Vector2(100, 99)
-texture = ExtResource("8_kk3ma")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_7wriu")
 
-[node name="SpaceXButton" type="Button" parent="SpaceXBox/Icon"]
-offset_left = -99.0
-offset_top = 105.0
-offset_right = 101.0
-offset_bottom = 150.0
+[node name="SpaceXButton" type="Button" parent="ShopBody/SpaceXBox"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 204.0
+offset_right = 201.0
+offset_bottom = 249.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ecwwl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5e35a")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_kk3ma")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrnbx")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_iqepy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c770m")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h1wq0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_h1wq0")
 icon = SubResource("AtlasTexture_iqepy")
 
-[node name="Label" type="Label" parent="SpaceXBox/Icon/SpaceXButton"]
+[node name="Label" type="Label" parent="ShopBody/SpaceXBox/SpaceXButton"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 7.0
@@ -309,7 +455,6 @@ scale = Vector2(0.9170854, 1)
 texture = ExtResource("14_jspdm")
 
 [node name="Poly" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(676, 598)
 texture = ExtResource("8_h1wq0")
 
@@ -413,13 +558,483 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gd0jp")
 visible = false
 position = Vector2(112, 96)
 
-[connection signal="pressed" from="AxiomBox/Icon/AxiomButton" to="." method="_on_axiom_button_pressed"]
-[connection signal="pressed" from="PolyBox/Icon/PolyButton" to="." method="_on_poly_button_pressed"]
-[connection signal="pressed" from="OrangeBox/Sprite2D/OrangeButton" to="." method="_on_orange_button_pressed"]
-[connection signal="pressed" from="SpaceXBox/Icon/SpaceXButton" to="." method="_on_space_x_button_pressed"]
+[node name="CustomizeBody" type="Sprite2D" parent="."]
+position = Vector2(960, 488)
+texture = ExtResource("5_iqepy")
+
+[node name="MarginContainer" type="MarginContainer" parent="CustomizeBody"]
+custom_minimum_size = Vector2(0, 600)
+offset_left = -352.0
+offset_top = -328.0
+offset_right = 352.0
+offset_bottom = 332.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CustomizeBody/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CustomizeBody/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 162)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Eyebrows" type="Label" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.89364964, 0.53760093, 0.44939804, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+theme_override_font_sizes/font_size = 30
+text = "Eyebrows"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Eyebrows2" type="HBoxContainer" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="noEB" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="EB1" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_snj3a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_snj3a")
+
+[node name="EB1" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB1"]
+position = Vector2(49, 50)
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_5wodf")
+
+[node name="EB2" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c770m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c770m")
+
+[node name="EB2" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB2"]
+position = Vector2(297.00003, 198)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("22_5e35a")
+
+[node name="EB3" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w0s3i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w0s3i")
+
+[node name="EB3" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB3"]
+position = Vector2(298.00003, 198)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("23_snj3a")
+
+[node name="EB4" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3kqnc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3kqnc")
+
+[node name="EB4" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB4"]
+position = Vector2(298, 196)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("24_c770m")
+
+[node name="EB5" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lo2je")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lo2je")
+
+[node name="EB5" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB5"]
+position = Vector2(297, 200)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("25_w0s3i")
+
+[node name="MarginContainer2" type="MarginContainer" parent="CustomizeBody/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 162)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="Eyes" type="Label" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.89364964, 0.53760093, 0.44939804, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+theme_override_font_sizes/font_size = 30
+text = "Eyes"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Eyes2" type="HBoxContainer" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Eyes" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="Sprite2D" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes"]
+position = Vector2(297.00006, 185)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("26_3kqnc")
+
+[node name="Eyes2" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="Sprite2D" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes2"]
+position = Vector2(297, 183)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("27_lo2je")
+
+[node name="Eyes3" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes3"]
+position = Vector2(295, 187)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("28_28d1b")
+
+[node name="Eyes4" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork44" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes4"]
+position = Vector2(295.99997, 185)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("29_bhlom")
+
+[node name="Eyes5" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork54" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes5"]
+position = Vector2(296.99997, 186)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_x5sqb")
+
+[node name="Eyes6" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork64" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes6"]
+position = Vector2(293.99994, 182)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("31_ciy7n")
+
+[node name="MarginContainer3" type="MarginContainer" parent="CustomizeBody/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 162)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="Mouth" type="Label" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.89364964, 0.53760093, 0.44939804, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+theme_override_font_sizes/font_size = 30
+text = "Mouth"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Mouth" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="Sprite2D" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth"]
+position = Vector2(294, 176)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("32_tnkdk")
+
+[node name="Mouth2" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth2"]
+position = Vector2(296, 176)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("33_8o4uf")
+
+[node name="Mouth3" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth3"]
+position = Vector2(295, 174)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("34_j1y2i")
+
+[node name="Mouth4" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth4"]
+position = Vector2(294.99997, 173)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("35_qb2su")
+
+[node name="Mouth5" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth5"]
+position = Vector2(299.99997, 175)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("36_0wi06")
+
+[node name="Mouth6" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+position = Vector2(816.99994, 173)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("37_3i641")
+
+[node name="MarginContainer4" type="MarginContainer" parent="CustomizeBody/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 162)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="Accessories" type="Label" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.89364964, 0.53760093, 0.44939804, 1)
+theme_override_fonts/font = ExtResource("5_ecwwl")
+theme_override_font_sizes/font_size = 30
+text = "Accessories"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Button" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="Button2" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="Button3" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="Button4" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="Button5" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="Button6" type="Button" parent="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xisss")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e35a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5e35a")
+
+[node name="E" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(677, 594)
+texture = ExtResource("26_3kqnc")
+
+[node name="E2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(675, 592)
+texture = ExtResource("27_lo2je")
+
+[node name="E3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(677, 597)
+texture = ExtResource("28_28d1b")
+
+[node name="E4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(678, 593)
+texture = ExtResource("29_bhlom")
+
+[node name="E5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(678, 592)
+texture = ExtResource("30_x5sqb")
+
+[node name="E6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(678, 586)
+texture = ExtResource("31_ciy7n")
+
+[node name="B" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(675, 588)
+texture = ExtResource("21_xisss")
+
+[node name="B2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(675, 585)
+texture = ExtResource("22_5e35a")
+
+[node name="B3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(675, 586)
+texture = ExtResource("23_snj3a")
+
+[node name="B4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(676, 583)
+texture = ExtResource("24_c770m")
+
+[node name="B5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(673, 588)
+texture = ExtResource("25_w0s3i")
+
+[node name="M" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(676, 596)
+texture = ExtResource("32_tnkdk")
+
+[node name="M2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(679, 594)
+texture = ExtResource("33_8o4uf")
+
+[node name="M3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(677, 592)
+texture = ExtResource("34_j1y2i")
+
+[node name="M4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(678, 591)
+texture = ExtResource("35_qb2su")
+
+[node name="M5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(681, 596)
+texture = ExtResource("36_0wi06")
+
+[node name="M6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(678, 594)
+texture = ExtResource("37_3i641")
+
+[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="Customize" to="." method="_on_customize_pressed"]
+[connection signal="pressed" from="ShopBody/AxiomBox/AxiomButton" to="." method="_on_axiom_button_pressed"]
+[connection signal="pressed" from="ShopBody/PolyBox/PolyButton" to="." method="_on_poly_button_pressed"]
+[connection signal="pressed" from="ShopBody/OrangeBox/OrangeButton" to="." method="_on_orange_button_pressed"]
+[connection signal="pressed" from="ShopBody/SpaceXBox/SpaceXButton" to="." method="_on_space_x_button_pressed"]
 [connection signal="pressed" from="descriptionPopUp/Description/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="QBut" to="." method="_on_q_but_pressed"]
 [connection signal="pressed" from="q&a/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/noEB" to="." method="_on_no_eb_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB1" to="." method="_on_eb_1_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB2" to="." method="_on_eb_2_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB3" to="." method="_on_eb_3_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB4" to="." method="_on_eb_4_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Eyebrows2/EB5" to="." method="_on_eb_5_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes" to="." method="_on_eyes_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes2" to="." method="_on_eyes_2_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes3" to="." method="_on_eyes_3_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes4" to="." method="_on_eyes_4_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes5" to="." method="_on_eyes_5_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/Eyes2/Eyes6" to="." method="_on_eyes_6_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth" to="." method="_on_mouth_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth2" to="." method="_on_mouth_2_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth3" to="." method="_on_mouth_3_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth4" to="." method="_on_mouth_4_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth5" to="." method="_on_mouth_5_pressed"]
+[connection signal="pressed" from="CustomizeBody/MarginContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/Mouth6" to="." method="_on_mouth_6_pressed"]
 
 [editable path="descriptionPopUp"]
 [editable path="stats"]
